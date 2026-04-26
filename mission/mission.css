@@ -1,0 +1,34 @@
+h1, h2, p{
+    width: 50%;
+    margin: 0 auto;
+}
+h1, h2{
+    text-align: center;
+}
+h1{
+    font-size: 2.5em;
+}
+h2{
+    margin-top: 25px;
+    font-size: 1em;
+    color: cornflowerblue;
+}
+hr{
+    width: 50%;
+    margin-bottom: 50px;
+}
+img{
+    width: 15%;
+    display: block;
+    margin: 50px auto;
+}
+#italics{
+    font-style: italic;
+}
+.list{
+    width:50%;
+    margin: 0 auto;
+}
+p, ol, li{
+    line-height: 1.5em;
+}
