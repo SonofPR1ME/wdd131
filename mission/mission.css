@@ -18,7 +18,7 @@ hr{
     margin-bottom: 50px;
 }
 img{
-    width: 15%;
+    width: 10%;
     display: block;
     margin: 50px auto;
 }
@@ -29,6 +29,10 @@ img{
     width:50%;
     margin: 0 auto;
 }
-p, ol, li{
+p, li{
     line-height: 1.5em;
+    margin-bottom: .75em;
+}
+body{
+    border: 1px solid black;
 }
