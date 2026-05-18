@@ -16,7 +16,7 @@ header{
 main{
     background-color: lightgray;
 }
-#images{
+.images{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
@@ -28,7 +28,7 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
 }
-#menu{
+.menu{
     display: none;
     margin-bottom: 5px;
 }
@@ -49,28 +49,76 @@ img{
     margin-bottom: 20px;
     border: 5px solid white;
 }
+    dialog img {
+        width: 30%;
+        margin: 15vh auto;
+    }
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
+    }
+    .viewer {
+        margin: 50px;
+        padding: 50px;
+    }
+    .viewer img {
+        max-width: 800px;
+    }
+    dialog {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.75);
+    }
 
 @media screen and (max-width: 1000px) {
-    #images{
+    .images{
         grid-template-columns: 1fr 1fr;
     }
-    #options{
-        display: none;
-    }
-    #menu{
+    .menu{
         display: inline;
         text-align: center;
-        margin-bottom: 5px;
+        margin-bottom: 10px;
+        text-decoration: none;
     }
-}
-@media screen and (max-width: 700px) {
-    #images{
-        grid-template-columns: 1fr;
+    .menu:hover{
+        cursor: pointer;
     }
-    #options{
+    dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+    }
+    dialog {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.75);
+    }
+    .close-viewer {
+        position: absolute;
+        top: 10vh;
+        right: 2vh;
+        padding: 3px 6px;
+        font-size: 1.5em;
+    }
+    .hide{
         display: none;
     }
-    #menu{
+    nav a:hover {
+        text-decoration: none;
+        color: #616061;
+    }
+    nav a{
+        display: block;
+        text-align: center;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .images{
+        grid-template-columns: 1fr;
+    }
+    .menu{
         display: inline;
         text-align: center;
         margin-bottom: 5px;
