@@ -1,0 +1,62 @@
+nav{
+    border-top: 2px solid goldenrod;
+    border-bottom: 2px solid goldenrod;
+    padding: 15px;
+    text-align: right;
+}
+h1{
+    text-align: center;
+}
+#date{
+    font-style: italic;
+}
+#title, a{
+    color:firebrick;
+    text-decoration: none;
+}
+footer{
+    border-top: 2px solid goldenrod;
+    padding: 5px;
+    text-align: center;
+}
+main{
+    justify-content: center;
+    text-align: center;
+}
+a{
+    text-align: right;
+    justify-content: right;
+    padding: 20px;
+}
+#information{
+    text-align: right;
+    margin-right: 60px;
+}
+
+@media (min-width: 600px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-column: 2/3;
+        margin: 10px 0px;
+    }
+    #information{
+        grid-column: 1/2;
+        display: block;
+    }
+    img{
+        grid-column: 2/3;
+        align-content: center;
+        display: block;
+        margin-left: 35%;
+    }
+    #discription{
+        grid-column: 2/3;
+    }
+    h2{
+       height: 25px; 
+    }
+    #right{
+        border-left: 2px solid goldenrod;
+    }
+}
