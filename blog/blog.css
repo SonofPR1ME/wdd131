@@ -19,7 +19,7 @@ footer{
     padding: 5px;
     text-align: center;
 }
-.books{
+.book{
     justify-content: center;
     text-align: center;
 }
@@ -34,7 +34,7 @@ a{
 }
 
 @media (min-width: 600px) {
-    .books{
+    .book{
         display: grid;
         grid-template-columns: 1fr 2fr;
         grid-column: 2/3;
