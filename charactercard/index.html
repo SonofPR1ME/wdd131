@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Character</title>
+    <!-- Open Graph (Facebook, LinkedIn, etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="My Character">
+    <meta property="og:description" content="A character card that can take damage and level up">
+    <meta property="og:url" content="sonofpr1me.github.io/wdd131/charactercard">
+    <meta property="og:image" content="character.webp">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="My Character">
+    <meta name="twitter:description" content="A character card that can take damage and level up">
+    <meta name="twitter:image" content="character.webp">
+
+    <!-- One favicon (ICO works everywhere) -->
+    <link rel="icon" href="/images/favicon.png">
+
+    <!-- One Apple Touch Icon (iOS home screen) -->
+    <link rel="apple-touch-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="charactercard.css">
+    <script src="charactercard.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <img src="/images/character.webp" alt="Snortleblat" class="image">
+        <h1 id="name" class="name"></h1>
+        <div class="stats">
+            <p id="class"></p>
+            <p id="level"></p>
+            <p id="health"></p>
+            <div class="buttons">
+                <button id="takeDamage">Attacked</button>
+                <button id="levelUp">Level Up</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
