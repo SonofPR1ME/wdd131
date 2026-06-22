@@ -1,0 +1,47 @@
+#logo{
+    width: 150px;
+    height: 150px;
+}
+
+#apple-crisp{
+    flex: 1 1 400px;
+    max-width: 400px;
+}
+
+#search-button{
+    width: 30px;
+    height: 30px;
+}
+
+.text{
+    flex-wrap: wrap;
+}
+
+.recipe-card{
+    display: flex;
+    flex-wrap: wrap;
+    border: 3px black solid;
+    border-radius: 15px;
+    padding: 9px;
+    margin: 15px;
+    flex-direction: column;
+    height: 300px;
+    gap: 1em;
+    justify-content: center;
+}
+
+
+.tag{
+    background-color: lightgray;
+    border: 2px black solid;
+    width: 50px;
+    padding: 2px;
+}
+
+.name{
+    color:cornflowerblue;
+}
+
+p{
+    max-width: 400px;
+}
