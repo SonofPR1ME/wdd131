@@ -6,54 +6,58 @@
     <title>Primal Randomizers</title>
     <link rel="stylesheet" href="styles/randomizer.css">
     <script src="randomizer.js" defer></script>
+    <link rel="icon" href="images/wheel.png">
 </head>
 <body>
     <header>
-        <img src="images/randomizer_pic.jpg" alt="Logo">
+        <img src="images/wheel.png" id="logo" alt="Logo">
         <h1>Primal Randomizers</h1>
     </header>
     <main>
-        <div>
-            <div class="Generator">
+        <div id="generators">
+            <div class="generator">
                 <h2>Random Number Generator</h2>
+                <h3>Default: 1 - 10</h3>
                 <input type="number" id="min" placeholder="Min">
                 <input type="number" id="max" placeholder="Max">
                 <p id="random-number"></p>
                 <button id="number-btn">Generate!</button>
             </div>
-            <div class="Generator">
+            <div class="generator">
                 <h2>Random Color Generator</h2>
                 <p id="random-color"></p>
                 <button id="color-btn">Generate!</button>
             </div>
-            <div class="Generator">
+            <div class="generator">
                 <h2>Random Grid Coordinate Generator</h2>
+                <h3>Default: 5x5 with pictures</h3>
+                <img id="grid-pic" src="images/3-3.png" alt="Grid">
                 <input type="number" id="rowmax" placeholder="Row Amount">
                 <input type="number" id="columnmax" placeholder="Column Amount">
                 <p id="random-grid"></p>
                 <button id="grid-btn">Generate!</button>
             </div>
-            <div class="Generator">
+            <div class="generator">
+                <h2>List Mixer Inputs</h2>
+                <textarea id="original-list" 
+                    placeholder="Please enter items, separated by a comma and space."></textarea>
+            </div>
+            <div class="generator">
                 <h2>Random Letter Generator</h2>
                 <p id="random-letter"></p>
                 <button id="letter-btn">Generate!</button>
             </div>
-            <div class="Generator">
-                <h2>List Mixer Inputs</h2>
-                <textarea id="original-list" placeholder="Please enter items, separated by a comma
-                 and space."></textarea>
-            </div>
-            <div class="Generator">
+            <div class="generator">
                 <h2>List Mixer</h2>
                 <p id="random-list"></p>
                 <button id="list-btn">Generate!</button>
             </div>
-            <div class="Generator">
+            <div class="generator">
                 <h2>Random Noun Generator</h2>
                 <p id="random-noun"></p>
                 <button id="noun-btn">Generate!</button>
             </div>
-            <div class="Generator">
+            <div class="generator">
                 <h2>Random Verb Generator</h2>
                 <p id="random-verb"></p>
                 <button id="verb-btn">Generate!</button>

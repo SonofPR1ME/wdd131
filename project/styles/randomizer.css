@@ -1,4 +1,60 @@
-textarea{
-    width: 20%;
+textarea {
+    width: 75%;
     height: 100px;
+}
+
+body{
+    text-align: center;
+    background-color: #08a4d3;
+}
+
+#generators {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0 15px
+}
+
+.generator{
+    padding: 20px;
+    border: 3px solid #f9b81e;
+    background-color: #6514a6;
+    margin: 3px
+}
+
+input{
+    margin: 5px
+}
+
+p, h1, h2, h3 {
+    color: #ef3c26;
+    margin: 11px
+    /* -webkit-text-stroke: 1px #000; */
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 40px
+}
+
+p {
+    font-size: 30px;
+}
+
+#grid-pic {
+    width: 80%;
+    margin: 10px 0
+}
+
+#grid-pic[hidden] {
+    display: none
+}
+
+
+@media (min-width: 600px) {
+    #generators {
+        grid-template-columns: 1fr 1fr;
+    }
 }

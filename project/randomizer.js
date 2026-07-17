@@ -52,8 +52,8 @@ let randomVerb = {
 }
 
 function generateRandomNumber() {
-    randomNumber.min = parseInt(document.querySelector("#min").value) || 1
-    randomNumber.max = parseInt(document.querySelector("#max").value) || 10
+    randomNumber.min = parseInt(document.querySelector("#min").value) || 1;
+    randomNumber.max = parseInt(document.querySelector("#max").value) || 10;
     randomNumber.value = Math.floor(Math.random() * (randomNumber.max - randomNumber.min + 1)) + 
         randomNumber.min;
     document.querySelector("#random-number").innerHTML = randomNumber.value;
@@ -72,12 +72,116 @@ function generateRandomColor() {
 }
 
 function generateRandomGrid() {
-    randomGrid.rowmax = parseInt(document.querySelector("#rowmax").value) || 5
-    randomGrid.columnmax = parseInt(document.querySelector("#columnmax").value) || 5
+    randomGrid.rowmax = parseInt(document.querySelector("#rowmax").value) || 5;
+    randomGrid.columnmax = parseInt(document.querySelector("#columnmax").value) || 5;
     randomGrid.row = Math.floor(Math.random() * randomGrid.rowmax) + 1;
     randomGrid.column = Math.floor(Math.random() * randomGrid.columnmax) + 1;
     document.querySelector("#random-grid").innerHTML = "R" + randomGrid.row + "C" +
      randomGrid.column;
+}
+
+function gridImage() {
+    let rows = parseInt(document.querySelector("#rowmax").value)
+    let columns = parseInt(document.querySelector("#columnmax").value)
+    const image = document.querySelector("#grid-pic")
+    if (
+        (rows === 5 && columns === 5) ||
+        (Number.isNaN(rows) && Number.isNaN(columns))
+    ) {
+        image.hidden = false;
+    } else {
+        image.hidden = true;
+    }
+}
+function imageSelector() {
+    let rows = randomGrid.row
+    let columns = randomGrid.column
+    const image = document.querySelector("#grid-pic")
+    if (rows === 1) {
+        if (columns === 1) {
+            image.setAttribute ("src", "images/1-1.png")
+        }
+        else if (columns === 2) {
+            image.setAttribute ("src", "images/1-2.png")
+        }
+        else if (columns === 3) {
+            image.setAttribute ("src", "images/1-3.png")
+        }
+        else if (columns === 4) {
+            image.setAttribute ("src", "images/1-4.png")
+        }
+        else if (columns === 5) {
+            image.setAttribute ("src", "images/1-5.png")
+        }
+    }
+    else if (rows === 2) {
+        if (columns === 1) {
+            image.setAttribute ("src", "images/2-1.png")
+        }
+        else if (columns === 2) {
+            image.setAttribute ("src", "images/2-2.png")
+        }
+        else if (columns === 3) {
+            image.setAttribute ("src", "images/2-3.png")
+        }
+        else if (columns === 4) {
+            image.setAttribute ("src", "images/2-4.png")
+        }
+        else if (columns === 5) {
+            image.setAttribute ("src", "images/2-5.png")
+        }
+    }
+    else if (rows === 3) {
+        if (columns === 1) {
+            image.setAttribute ("src", "images/3-1.png")
+        }
+        else if (columns === 2) {
+            image.setAttribute ("src", "images/3-2.png")
+        }
+        else if (columns === 3) {
+            image.setAttribute ("src", "images/3-3.png")
+        }
+        else if (columns === 4) {
+            image.setAttribute ("src", "images/3-4.png")
+        }
+        else if (columns === 5) {
+            image.setAttribute ("src", "images/3-5.png")
+        }
+    }
+    else if (rows === 4) {
+        if (columns === 1) {
+            image.setAttribute ("src", "images/4-1.png")
+        }
+        else if (columns === 2) {
+            image.setAttribute ("src", "images/4-2.png")
+        }
+        else if (columns === 3) {
+            image.setAttribute ("src", "images/4-3.png")
+        }
+        else if (columns === 4) {
+            image.setAttribute ("src", "images/4-4.png")
+        }
+        else if (columns === 5) {
+            image.setAttribute ("src", "images/4-5.png")
+        }
+    }
+    else if (rows === 5) {
+        if (columns === 1) {
+            image.setAttribute ("src", "images/5-1.png")
+        }
+        else if (columns === 2) {
+            image.setAttribute ("src", "images/5-2.png")
+        }
+        else if (columns === 3) {
+            image.setAttribute ("src", "images/5-3.png")
+        }
+        else if (columns === 4) {
+            image.setAttribute ("src", "images/5-4.png")
+        }
+        else if (columns === 5) {
+            image.setAttribute ("src", "images/5-5.png")
+        }
+    }
 }
 
 function generateRandomLetter() {
@@ -118,6 +222,8 @@ colorBtn.addEventListener("click", generateRandomColor);
 
 let gridBtn = document.querySelector("#grid-btn");
 gridBtn.addEventListener("click", generateRandomGrid);
+gridBtn.addEventListener("click", gridImage);
+gridBtn.addEventListener("click", imageSelector);
 
 let letterBtn = document.querySelector("#letter-btn");
 letterBtn.addEventListener("click", generateRandomLetter);
